@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palantir Clone</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="main-navbar">
+        <div class="nav-left">
+            <p>Palantir</p>
+        </div>
+
+        <div class="nav-right">
+            <a href="#" class="get-started">Get Started</a>
+            <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+            <button class="hamburger" onclick="openMenu()">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- Fullscreen Menu Overlay -->
+    <div id="menuOverlay" class="menu-overlay">
+        <button class="close-btn" onclick="closeMenu()">&times;</button>
+        <nav class="menu-links">
+            <a href="#platforms" onclick="closeMenu()">Platforms</a>
+            <a href="#industries" onclick="closeMenu()">Industries</a>
+            <a href="#careers" onclick="closeMenu()">Careers</a>
+            <a href="#footer" onclick="closeMenu()">About</a>
+        </nav>
+    </div>
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+        <button class="close-btn" onclick="toggleSearch()">&times;</button>
+        <input type="text" placeholder="Start typing to search" class="search-input" />
+        <div class="popular-searches">
+            <span>POPULAR SEARCHES</span>
+            <a href="#">Foundry</a>
+            <a href="#">Gotham</a>
+            <a href="#">Apollo</a>
+            <a href="#">Ontology</a>
+            <a href="#">Artificial Intelligence (AI)</a>
+        </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="assets/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1>AI-Powered Automation for Every Decision</h1>
+        </div>
+        <div class="exp">
+            <a href="#services" class="scroll-down">↓</a>
+            <p class="scroll">Scroll to Explore</p>
+        </div>
+    </section>
+
+    <div class="palantir-carousel-container">
+
+        <!-- Tab Controls -->
+        <div class="carousel-tabs">
+            <button class="tab active" onclick="showSlide(0)">Defense Reformation</button>
+            <button class="tab" onclick="showSlide(1)">Warp Speed</button>
+            <button class="tab" onclick="showSlide(2)">DevCon2</button>
+            <button class="tab" onclick="showSlide(3)">Vantage</button>
+        </div>
+
+        <!-- Slides -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img1.jpg" class="d-block w-100" alt="...">
+                    <div class="slide-overlay">
+                        <h4>DEFENSE REFORMATION</h4>
+                        <h2>Securing strategic infrastructure across domains →</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img2.jpg" class="d-block w-100" alt="...">
+                    <div class="slide-overlay">
+                        <h4>WARP SPEED</h4>
+                        <h2>Transforming global supply chains through data →</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img3.jpg" class="d-block w-100" alt="...">
+                    <div class="slide-overlay">
+                        <h4>DEVCON2</h4>
+                        <h2>Maximizing Builder Leverage →</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img4.jpeg" class="d-block w-100" alt="...">
+                    <div class="slide-overlay">
+                        <h4>VANTAGE</h4>
+                        <h2>Supporting Army Strategy & Multi-Domain Ops →</h2>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <section class="full-white-section">
+        <p class="callout fade-up">
+            Our software powers real-time, <span>AI-driven</span> decisions in critical government and commercial
+            enterprises in the West, from the factory floors to the front lines.
+        </p>
+    </section>
+
+    <!--Our Platforms-->
+    <div class="platform">
+        <h2 style="font-size: 20px;">Our Platforms</h2>
+        <div class="sub-link">
+            <a href="#" style="font-size: 80px;">AIP</a>
+            <a href="#">
+                <p style="font-size: 20px;">Automate operations, from the factory floor to the front lines</p>
+            </a>
+        </div>
+        <div class="sub-link gapbtw">
+            <a href="#" style="font-size: 80px;">GOTHAM</a>
+            <a href="#">
+                <p style="font-size: 20px;">Achieve AI-driven combat superiority, from space to mud</p>
+            </a>
+        </div>
+        <div class="sub-link gapbtw">
+            <a href="#" style="font-size: 80px;">FOUNDRY</a>
+            <a href="#">
+                <p style="font-size: 20px;">Build and manage Ontology-powered software, with a complete developer
+                    platform</p>
+            </a>
+        </div>
+        <div class="sub-link gapbtw">
+            <a href="#" style="font-size: 80px;">APOLLO</a>
+            <a href="#">
+                <p style="font-size: 20px;">Autonomously deploy, monitor, and manage software across any environment</p>
+            </a>
+        </div>
+    </div>
+
+    <!--Horizontal card-->
+    <div class="container-fluid px-0 palantir-card d-flex align-items-center">
+        <div class="row w-100 m-0">
+            <div class="col-md-6">
+                <img src="assets/hor.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="People Working">
+            </div>
+            <div class="col-md-6 d-flex flex-column justify-content-center align-items-start p-5">
+                <h1 class="palantir-title mb-3">There is so much left to build</h1>
+                <p class="palantir-text mb-4">Palantirians deliver mission-critical outcomes for the West's most
+                    important institutions.</p>
+                <a href="#" class="btn palantir-btn">LEARN MORE</a>
+            </div>
+        </div>
+    </div>
+
+    <hr style="margin: 0; height: 1px; background-color: #ccc; border: none;" />
+
+    <!--What our partners say-->
+    <div style="background-color: white; padding-top: 30px; padding-bottom: 60px;">
+        <h2 class="testimonial-heading">What our partners say about us</h2>
+        <div class="marquee-wrapper">
+            <div class="marquee">
+                <!-- Duplicate the cards for seamless looping -->
+                <div class="testimonial-card">
+                    <div class="testimonial-title">WENDY'S</div>
+                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta fugit, veniam excepturi itaque minima sunt ipsum nobis eum consectetur velit est incidunt, accusamus sed rem adipisci dolorem error repellendus?</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-title">WALGREENS</div>
+                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quaerat adipisci in, velit repellendus, sed consectetur dignissimos ullam, asperiores facilis debitis earum at veniam aspernatur odit maiores recusandae? Reiciendis, quidem?</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-title">AT&T</div>
+                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non dicta qui velit nam consequuntur eveniet porro vero hic, explicabo, eaque, veniam accusamus? Veritatis eaque fugit, iste animi mollitia maxime.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-title">PAREXEL</div>
+                    <div class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet non suscipit eum harum, unde optio aliquid inventore necessitatibus. Rerum voluptatum ea voluptates sit sed cupiditate, fuga ab est quas debitis.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-title">US ARMY</div>
+                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ipsa pariatur, delectus molestiae sint quis nihil iure asperiores eum consequatur repellendus doloremque odit suscipit facere animi ea ut nam ab?</div>
+                </div>
+
+                <!-- Duplicates for infinite loop -->
+                <div class="testimonial-card">
+                    <div class="testimonial-title">WENDY'S</div>
+                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus dolorem quis perspiciatis magnam nulla totam maiores aut, dolores minima deleniti adipisci maxime doloribus, sunt consequuntur nihil voluptatem voluptate repudiandae?</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-title">WALGREENS</div>
+                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ratione facilis? Alias facere esse tempora, nulla illum earum voluptatum pariatur id officiis veniam ea unde tenetur veritatis ad, eius hic.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-title">AT&T</div>
+                    <div class="testimonial-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ratione fuga omnis quaerat aliquid nesciunt ipsam mollitia dolorem. Explicabo cupiditate obcaecati alias! Dolorum sit impedit enim distinctio ab illo vero!</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-title">PAREXEL</div>
+                    <div class="testimonial-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex reiciendis vel fugit harum ad. Assumenda dolor rem consectetur a ipsa nam corrupti qui cum consequuntur, officiis ratione placeat sequi adipisci!</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-title">US ARMY</div>
+                    <div class="testimonial-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae dignissimos, quod voluptate commodi illum consequatur corrupti quasi dicta adipisci possimus explicabo vitae distinctio velit veritatis debitis quisquam provident officia iure!</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p>&copy; 2025 Palantir Clone.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
