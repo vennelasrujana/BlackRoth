@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Palantir Clone</title>
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
@@ -15,15 +17,17 @@
 
     <!-- Navbar -->
     <header class="main-navbar">
+
         <div class="nav-left">
-            <p>Palantir</p>
+            <a href="#">BlackRoth</a>
         </div>
 
         <div class="nav-right">
             <a href="#" class="get-started">Get Started</a>
-            <button class="search-toggle" onclick="toggleSearch()">🔍</button>
+            <a class="search-toggle" onclick="toggleSearch()"><i class="fa-solid fa-magnifying-glass"></i></a>
             <button class="hamburger" onclick="openMenu()">&#9776;</button>
         </div>
+
     </header>
 
     <!-- Fullscreen Menu Overlay -->
@@ -55,12 +59,12 @@
     <!-- Hero Section -->
     <section class="hero">
         <video autoplay muted loop class="hero-video">
-            <source src="assets/video.mp4" type="video/mp4" />
+            <source src="assets/1.mp4 (9).mp4" type="video/mp4" />
             Your browser does not support the video tag.
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-text">
-            <h1>AI-Powered Automation for Every Decision</h1>
+            <h1>Transforming Decisions with Intelligent Automation</h1>
         </div>
         <div class="exp">
             <a href="#services" class="scroll-down">↓</a>
@@ -68,45 +72,58 @@
         </div>
     </section>
 
+    <!-- <div>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Innovative AI projects that drive <span class="ser">business forword</span></p>
+    </div> -->
+
     <div class="palantir-carousel-container">
 
         <!-- Tab Controls -->
         <div class="carousel-tabs">
-            <button class="tab active" onclick="showSlide(0)">Defense Reformation</button>
-            <button class="tab" onclick="showSlide(1)">Warp Speed</button>
-            <button class="tab" onclick="showSlide(2)">DevCon2</button>
-            <button class="tab" onclick="showSlide(3)">Vantage</button>
+            <button class="tab active" onclick="showSlide(0)">Containerization & Orchestration</button>
+            <button class="tab" onclick="showSlide(1)">UUV Coordination</button>
+            <button class="tab" onclick="showSlide(2)">Autonomous Navigation & Collision Avoidance</button>
+            <button class="tab" onclick="showSlide(3)">Edge Computing</button>
+            <button class="tab" onclick="showSlide(4)">IoT Integration</button>
         </div>
 
         <!-- Slides -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/img1.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/container.png" class="d-block w-100" alt="...">
                     <div class="slide-overlay">
-                        <h4>DEFENSE REFORMATION</h4>
-                        <h2>Securing strategic infrastructure across domains →</h2>
+                        <h4>Containerization & Orchestration</h4>
+                        <h2>AI-powered Integrated Fleet Management →</h2>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img2.jpg" class="d-block w-100" alt="...">
+                    <img src="assets/generated-image.png" class="d-block w-100" alt="...">
                     <div class="slide-overlay">
-                        <h4>WARP SPEED</h4>
-                        <h2>Transforming global supply chains through data →</h2>
+                        <h4>UUV Coordination</h4>
+                        <h2>Submarine Operations and Health Management System →</h2>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="assets/img3.jpg" class="d-block w-100" alt="...">
                     <div class="slide-overlay">
-                        <h4>DEVCON2</h4>
-                        <h2>Maximizing Builder Leverage →</h2>
+                        <h4>Autonomous Navigation & Collision Avoidance</h4>
+                        <h2>Satellite Operations & Earth Analytics Platform →</h2>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="assets/img4.jpeg" class="d-block w-100" alt="...">
                     <div class="slide-overlay">
-                        <h4>VANTAGE</h4>
-                        <h2>Supporting Army Strategy & Multi-Domain Ops →</h2>
+                        <h4>Edge Computing</h4>
+                        <h2>AI-Powered Data Center Operations Platform →</h2>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img4.jpeg" class="d-block w-100" alt="...">
+                    <div class="slide-overlay">
+                        <h4>IoT Integration</h4>
+                        <h2>Smart Skyscraper AI Management Platform →</h2>
                     </div>
                 </div>
             </div>
@@ -125,7 +142,8 @@
 
     <section class="full-white-section">
         <p class="callout fade-up">
-            Our software powers real-time, <span>AI-driven</span> decisions in critical government and commercial
+            Our software powers real-time, <span class="slide-text">AI-driven</span> decisions in critical government
+            and commercial
             enterprises in the West, from the factory floors to the front lines.
         </p>
     </section>
@@ -163,10 +181,13 @@
     <!--Horizontal card-->
     <div class="container-fluid px-0 palantir-card d-flex align-items-center">
         <div class="row w-100 m-0">
-            <div class="col-md-6">
-                <img src="assets/hor.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="People Working">
+            <div class="col-md-7">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/card video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
-            <div class="col-md-6 d-flex flex-column justify-content-center align-items-start p-5">
+            <div class="col-md-5 d-flex flex-column justify-content-center align-items-start p-5">
                 <h1 class="palantir-title mb-3">There is so much left to build</h1>
                 <p class="palantir-text mb-4">Palantirians deliver mission-critical outcomes for the West's most
                     important institutions.</p>
@@ -177,63 +198,56 @@
 
     <hr style="margin: 0; height: 1px; background-color: #ccc; border: none;" />
 
-    <!--What our partners say-->
-    <div style="background-color: white; padding-top: 30px; padding-bottom: 60px;">
-        <h2 class="testimonial-heading">What our partners say about us</h2>
-        <div class="marquee-wrapper">
-            <div class="marquee">
-                <!-- Duplicate the cards for seamless looping -->
-                <div class="testimonial-card">
-                    <div class="testimonial-title">WENDY'S</div>
-                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dicta fugit, veniam excepturi itaque minima sunt ipsum nobis eum consectetur velit est incidunt, accusamus sed rem adipisci dolorem error repellendus?</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-title">WALGREENS</div>
-                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quaerat adipisci in, velit repellendus, sed consectetur dignissimos ullam, asperiores facilis debitis earum at veniam aspernatur odit maiores recusandae? Reiciendis, quidem?</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-title">AT&T</div>
-                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non dicta qui velit nam consequuntur eveniet porro vero hic, explicabo, eaque, veniam accusamus? Veritatis eaque fugit, iste animi mollitia maxime.</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-title">PAREXEL</div>
-                    <div class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet non suscipit eum harum, unde optio aliquid inventore necessitatibus. Rerum voluptatum ea voluptates sit sed cupiditate, fuga ab est quas debitis.</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-title">US ARMY</div>
-                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, ipsa pariatur, delectus molestiae sint quis nihil iure asperiores eum consequatur repellendus doloremque odit suscipit facere animi ea ut nam ab?</div>
-                </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Column 1 -->
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Newsroom</a></li>
+                </ul>
+            </div>
 
-                <!-- Duplicates for infinite loop -->
-                <div class="testimonial-card">
-                    <div class="testimonial-title">WENDY'S</div>
-                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae possimus dolorem quis perspiciatis magnam nulla totam maiores aut, dolores minima deleniti adipisci maxime doloribus, sunt consequuntur nihil voluptatem voluptate repudiandae?</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-title">WALGREENS</div>
-                    <div class="testimonial-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ratione facilis? Alias facere esse tempora, nulla illum earum voluptatum pariatur id officiis veniam ea unde tenetur veritatis ad, eius hic.</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-title">AT&T</div>
-                    <div class="testimonial-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ratione fuga omnis quaerat aliquid nesciunt ipsam mollitia dolorem. Explicabo cupiditate obcaecati alias! Dolorum sit impedit enim distinctio ab illo vero!</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-title">PAREXEL</div>
-                    <div class="testimonial-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex reiciendis vel fugit harum ad. Assumenda dolor rem consectetur a ipsa nam corrupti qui cum consequuntur, officiis ratione placeat sequi adipisci!</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-title">US ARMY</div>
-                    <div class="testimonial-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae dignissimos, quod voluptate commodi illum consequatur corrupti quasi dicta adipisci possimus explicabo vitae distinctio velit veritatis debitis quisquam provident officia iure!</div>
-                </div>
+            <!-- Column 2 -->
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">API Docs</a></li>
+                </ul>
+            </div>
 
+            <!-- Column 3 -->
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Security</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 - Social -->
+            <div class="footer-column social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="footer" id="footer">
-        <p>&copy; 2025 Palantir Clone.</p>
+        <div class="footer-bottom">
+            <p>© 2025 BlackRoth. All rights reserved.</p>
+        </div>
     </footer>
+
+
 
     <!-- JavaScript -->
     <script src="script.js"></script>
@@ -241,7 +255,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
-
 </body>
 
 </html>
