@@ -15,10 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (menu) menu.classList.toggle('active');
     }
 
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const card = document.querySelector("#aboutUsCard");
-
+    // About Us card scroll reveal
+    const card = document.querySelector("#aboutUsCard");
+    if (card) {
         function revealOnScroll() {
             const rect = card.getBoundingClientRect();
             const windowHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -30,34 +29,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window.addEventListener("scroll", revealOnScroll);
         revealOnScroll();
-    });
+    }
 
-
-
-
-
-    // Expose menu functions globally if needed elsewhere
+    // Expose menu functions globally
     window.openMenu = openMenu;
     window.closeMenu = closeMenu;
     window.toggleSearch = toggleSearch;
 
-    // Carousel tab sync
-    const carousel = document.querySelector('#carouselExampleControls');
-    if (carousel) {
-        const bsCarousel = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
+    // ✅ Carousel functionality
+    const myCarousel = document.getElementById('carouselExampleControls');
+    const tabs = document.querySelectorAll('.carousel-tabs span');
 
-        // On tab click
-        window.showSlide = function (index) {
-            bsCarousel.to(index);
-        };
+    if (myCarousel && tabs.length > 0) {
+        myCarousel.addEventListener('slid.bs.carousel', function (event) {
+            const activeIndex = event.to;
 
-        // On slide change, highlight the correct tab
-        carousel.addEventListener('slid.bs.carousel', function (e) {
-            const tabs = document.querySelectorAll('.carousel-tabs .tab');
-            tabs.forEach((tab, idx) => {
-                tab.classList.toggle('active', idx === e.to);
+            // Remove zoom from all tabs
+            tabs.forEach(tab => tab.classList.remove('zoom-active'));
+
+            // Add zoom to active tab
+            const activeTab = document.querySelector(`.carousel-tabs span[data-tab="${activeIndex}"]`);
+            if (activeTab) activeTab.classList.add('zoom-active');
+        });
+
+        // ✅ Add click listener for manual tab selection
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                // Move carousel to clicked tab
+                const carousel = bootstrap.Carousel.getInstance(myCarousel);
+                carousel.to(index);
+
+                // Update zoom
+                tabs.forEach(t => t.classList.remove('zoom-active'));
+                tab.classList.add('zoom-active');
             });
         });
+
+        // Initial zoom for first tab
+        tabs[0].classList.add('zoom-active');
     }
 
     // Fade-up and Slide-in animations using IntersectionObserver

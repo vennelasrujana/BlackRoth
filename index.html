@@ -81,12 +81,13 @@
 
         <!-- Tab Controls -->
         <div class="carousel-tabs">
-            <button class="tab active" onclick="showSlide(0)">Containerization & Orchestration</button>
-            <button class="tab" onclick="showSlide(1)">UUV Coordination</button>
-            <button class="tab" onclick="showSlide(2)">Autonomous Navigation & Collision Avoidance</button>
-            <button class="tab" onclick="showSlide(3)">Edge Computing</button>
-            <button class="tab" onclick="showSlide(4)">IoT Integration</button>
+            <span class="tab active" data-tab="0" onclick="showSlide(0)">Containerization & Orchestration</span>
+            <span class="tab" data-tab="1" onclick="showSlide(1)">UUV Coordination</span>
+            <span class="tab" data-tab="2" onclick="showSlide(2)">Autonomous Navigation & Collision Avoidance</span>
+            <span class="tab" data-tab="3" onclick="showSlide(3)">Edge Computing</span>
+            <span class="tab" data-tab="4" onclick="showSlide(4)">IoT Integration</span>
         </div>
+
 
         <!-- Slides -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -148,7 +149,34 @@
         </p>
     </section>
 
-    <!--Our Platforms-->
+    <!-- grid -->
+    <div class="grid-container">
+        <div class="image-grid">
+            <div class="grid-item grid-item-1">
+                <img src="assets/java.png" alt="">
+                <div class="overlay">Mobile app development</div>
+            </div>
+            <div class="grid-item grid-item-2">
+                <img src="assets/java.png" alt="">
+                <div class="overlay">Cyber security</div>
+            </div>
+            <div class="grid-item grid-item-3">
+                <img src="assets/java.png" alt="">
+                <div class="overlay">AI & MACHINE LEARNING</div>
+            </div>
+            <div class="grid-item">
+                <img src="assets/java.png" alt="">
+                <div class="overlay">Data science with AI</div>
+            </div>
+            <div class="grid-item">
+                <img src="assets/java.png" alt="">
+                <div class="overlay">Data visualization</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Our Platforms
     <div class="platform">
         <h2 style="font-size: 20px;">Our Platforms</h2>
         <div class="sub-link">
@@ -176,7 +204,7 @@
                 <p style="font-size: 20px;">Autonomously deploy, monitor, and manage software across any environment</p>
             </a>
         </div>
-    </div>
+    </div> -->
 
     <!--Horizontal card-->
     <div class="container-fluid px-0 palantir-card d-flex align-items-center">
@@ -211,7 +239,27 @@
                 </ul>
             </div>
 
-            <!-- Column 2 -->
+            <div class="footer-column">
+                <h4>Our services </h4>
+                <ul>
+                    <li><a href="#">Data science with AI</a></li>
+                    <li><a href="#">Cyber security</a></li>
+                    <li><a href="#">Cloud computing</a></li>
+                    <li><a href="#">Data visualization</a></li>
+                    <li><a href="#">Salesforce</a></li>
+                    <li><a href="#">Mobile app development</a></li>
+                    <li><a href="#">Full stack</a></li>
+                    <li><a href="#">Web development</a></li>
+                    <li><a href="#">Digital marketing</a></li>
+                    <li><a href="#">Data base</a></li>
+                    <li><a href="#">UI/UX</a></li>
+                    <li><a href="#">AI & MACHINE LEARNING</a></li>
+                    <li><a href="#">Business analysts</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Column 3 -->
             <div class="footer-column">
                 <h4>Resources</h4>
                 <ul>
@@ -221,7 +269,7 @@
                 </ul>
             </div>
 
-            <!-- Column 3 -->
+            <!-- Column 4 -->
             <div class="footer-column">
                 <h4>Legal</h4>
                 <ul>
