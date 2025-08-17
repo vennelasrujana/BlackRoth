@@ -464,7 +464,7 @@ body {
 @media (min-width: 992px) {
   .image-grid {
     grid-template-columns: 300px 400px 300px;
-    grid-template-rows: 300px 300px 300px;
+    grid-template-rows: 300px 300px;
     gap: 10px;
   }
 
@@ -481,10 +481,10 @@ body {
     grid-column: 3/4;
   }
 
-  .grid-item-7 {
+  /* .grid-item-7 {
     grid-column: 2/3;
     grid-row: 3/5;
-  }
+  } */
 
   /* if you add them later */
 }
